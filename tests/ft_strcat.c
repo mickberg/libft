@@ -1,18 +1,16 @@
 /**
- * File              : test_main.c
+ * File              : ft_strcat.c
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
  * Last Modified Date: 20.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
-#include "testlib.h"
-
-int	main(void)
+void	test_ft_strcat(void)
 {
-	test_ft_strlen();
-	test_ft_toupper();
-	test_ft_tolower();
+	int		failed;
+	char	str1[10];
 
-	return (0);
+	*str1 = "Kalle anka";
+
 }

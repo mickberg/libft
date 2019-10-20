@@ -13,6 +13,8 @@
 #include "../../libft.h"
 
 int		test_ft_strlen(void);
+void	test_ft_toupper(void);
+void	test_ft_tolower(void);
 void	ft_putstr(char *str);
 void	ft_printfail(char *str);
 void	ft_printpass(char *str);

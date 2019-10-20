@@ -10,6 +10,8 @@
 # define FT_LIBFT_H
 
 unsigned long		ft_strlen(char *str);
+unsigned int		ft_toupper(unsigned int c);
+unsigned int		ft_tolower(unsigned int c);
 //char				*ft_strcat(char *s1, char *s2);
 
 #endif
