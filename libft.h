@@ -16,6 +16,6 @@ int					ft_strcmp(char *s1, char *s2);
 long				ft_abs(int nb);
 int					ft_intlen(int nb);
 char				*ft_itoa(int nb);
-//char				*ft_strcat(char *s1, char *s2);
+int					ft_isalpha(int c);
 
 #endif

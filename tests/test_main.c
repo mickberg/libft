@@ -17,6 +17,7 @@ int	main(void)
 	test_ft_abs();
 	test_ft_intlen();
 	test_ft_itoa();
+	test_ft_isalpha();
 
 	return (0);
 }

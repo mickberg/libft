@@ -19,6 +19,7 @@ void	test_ft_strcmp(void);
 void	test_ft_abs(void);
 void	test_ft_intlen(void);
 void	test_ft_itoa(void);
+void	test_ft_isalpha(void);
 
 void	ft_putstr(char *str);
 void	ft_printfail(char *str);
