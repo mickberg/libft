@@ -18,5 +18,6 @@ int					ft_intlen(int nb);
 char				*ft_itoa(int nb);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
+int					ft_isalnum(int c);
 
 #endif
