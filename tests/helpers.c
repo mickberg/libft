@@ -2,7 +2,7 @@
  * File              : helpers.c
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
- * Last Modified Date: 20.10.2019
+ * Last Modified Date: 22.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
@@ -28,4 +28,13 @@ void	ft_printpass(char *str)
 	ft_putstr("Test passed! ");
 	ft_putstr(str);
 	ft_putstr("\n");
+}
+
+void	ft_printdiff_str(char *s1, char *s2)
+{
+	ft_putstr(" - Expected: [");
+	ft_putstr(s1);
+	ft_putstr("] got ["):
+	ft_putstr(s2);
+	ft_putstr("]\n");
 }
