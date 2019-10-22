@@ -16,10 +16,14 @@ int		test_ft_strlen(void);
 void	test_ft_toupper(void);
 void	test_ft_tolower(void);
 void	test_ft_strcmp(void);
+void	test_ft_abs(void);
+void	test_ft_intlen(void);
+void	test_ft_itoa(void);
 
 void	ft_putstr(char *str);
 void	ft_printfail(char *str);
 void	ft_printpass(char *str);
 void	ft_printdiff_str(char *s1, char *s2);
+void	ft_printdiff_int(int n1, int n2);
 
 #endif

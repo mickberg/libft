@@ -7,29 +7,32 @@
  */
 
 #include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
 
 char *ft_itoa(int nb)
 {
-	char			*str;
-	unsigned int	len;
-	long			num;
-	int				i;
+	long	num;
+	int		len;
+	int		i;
+	char	*str;
 
-	num = nb;
-	len = 0;
-	i = num;
-	if (num < 0)
-	{
-		num *= -1;
+	num = ft_abs(nb);
+	len = ft_intlen(nb);
+	if (nb < 0)
 		++len;
-	}
-	else if (num == 0)
-		len = 1;
-	while (i > 0)
+	str = (char*)malloc(sizeof(char) * (len + 1));
+	if (nb < 0)
+		str[0] = '-';
+	else if (nb == 0)
+		str[0] = '0';
+	i = 1;
+	while (num > 0)
 	{
-		i /= 10;
-		len++;
+		str[len - i] = (char)(num % 10) + '0';
+		++i;
+		num /= 10;
 	}
-
-	str = (char*)malloc(sizeof(char) * len+1);
+	str[len] = '\0';
+	return (str);
 }

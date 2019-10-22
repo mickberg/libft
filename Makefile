@@ -13,7 +13,7 @@ TEST_OBJ_DIR = $(OBJ_DIR)tests/
 INC_DIR = tests/includes
 
 # Files, library and tests
-SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c
+SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_abs.c ft_intlen.c ft_itoa.c
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 TEST_SRCS = $(addprefix $(TEST_DIR), $(SRCS) test_main.c helpers.c)
 TEST_OBJS = $(addprefix $(TEST_OBJ_DIR), $(SRCS:.c=.o) test_main.o helpers.o)
