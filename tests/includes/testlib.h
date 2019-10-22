@@ -24,6 +24,7 @@ void	test_ft_isdigit(void);
 void	test_ft_isalnum(void);
 void	test_ft_isascii(void);
 void	test_ft_isprint(void);
+void	test_ft_atoi(void);
 
 void	ft_putstr(char *str);
 void	ft_printfail(char *str);
