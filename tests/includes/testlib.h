@@ -22,6 +22,7 @@ void	test_ft_itoa(void);
 void	test_ft_isalpha(void);
 void	test_ft_isdigit(void);
 void	test_ft_isalnum(void);
+void	test_ft_isascii(void);
 
 void	ft_putstr(char *str);
 void	ft_printfail(char *str);
