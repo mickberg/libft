@@ -18,6 +18,7 @@ int	main(void)
 	test_ft_intlen();
 	test_ft_itoa();
 	test_ft_isalpha();
+	test_ft_isdigit();
 
 	return (0);
 }
