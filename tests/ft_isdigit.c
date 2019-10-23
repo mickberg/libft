@@ -1,3 +1,10 @@
+/**
+ * File              : ft_isdigit.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 22.10.2019
+ * Last Modified Date: 22.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -12,35 +19,19 @@
 
 #include "testlib.h"
 
-void	test_ft_isdigit(void)
+int	test_ft_isdigit(void)
 {
-	int failed;
+	int failed = 0;
+	char *name = "ft_isdigit";
 
-	failed = 0;
-	if (ft_isdigit('0') != 1)
-	{
-		ft_printfail("[ft_isdigit] test 1");
-		ft_printdiff_int(1, ft_isdigit('0'));
-		++failed;
-	}
-	if (ft_isdigit('9') != 1)
-	{
-		ft_printfail("[ft_isdigit] test 2");
-		ft_printdiff_int(1, ft_isdigit('9'));
-		++failed;
-	}
-	if (ft_isdigit('a') != 0)
-	{
-		ft_printfail("[ft_isdigit] test 3");
-		ft_printdiff_int(0, ft_isdigit('a'));
-		++failed;
-	}
-	if (ft_isdigit('\0') != 0)
-	{
-		ft_printfail("[ft_isdigit] test 4");
-		ft_printdiff_int(0, ft_isdigit('\0'));
-		++failed;
-	}
-	if (failed == 0)
-		ft_printpass("[ft_isdiigit] test 5");
+	char c1 = '0';
+	char c2 = '9';
+	char c3 = (char)(47);
+	char c4 = (char)(58);
+
+	failed += test_int(1, ft_isdigit(c1), name, "0");
+	failed += test_int(1, ft_isdigit(c2), name, "9");
+	failed += test_int(0, ft_isdigit(c3), name, "first left");
+	failed += test_int(0, ft_isdigit(c4), name, "first right");
+	return (failed);
 }

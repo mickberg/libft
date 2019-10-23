@@ -1,41 +1,28 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 13:07:26 by mberglun          #+#    #+#             */
-/*   Updated: 2019/10/22 13:21:03 by mberglun         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/**
+ * File              : ft_intlen.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 22.10.2019
+ * Last Modified Date: 22.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 
 #include "testlib.h"
+#include <math.h>
+#include <stdlib.h>
 
-void	test_ft_intlen(void)
+int				test_ft_intlen(void)
 {
-	int failed;
+	int		failed = 0;
+	char	*name = "ft_intlen";
 
-	failed = 0;
-	if (ft_intlen(0) != 1)
-	{
-		ft_printfail("[ft_intlen] test 1");
-		ft_printdiff_int(1, ft_intlen(0));
-		++failed;;
-	}
-	if (ft_intlen(2147483647) != 10)
-	{
-		ft_printfail("[ft_intlen] test 2");
-		ft_printdiff_int(10, ft_intlen(2147483647));
-		++failed;;
-	}
-	if (ft_intlen(-123) != 3)
-	{
-		ft_printfail("[ft_intlen] test 3");
-		ft_printdiff_int(3, ft_intlen(-123));
-		++failed;
-	}
-	if (failed == 0)
-		ft_printpass("[ft_intlen] 3 tests.");
+	int		n1 = 0;
+	int		n2 = MIN_INT;
+	int		n3 = MAX_INT;
+	int		n4 = -54322;
 
+	failed += test_int(1, ft_intlen(n1), name, "zero");
+	failed += test_int(10, ft_intlen(n2), name, "min int");
+	failed += test_int(10, ft_intlen(n3), name, "max int");
+	failed += test_int(5, ft_intlen(n4), name, "normal negative");
+	return (failed);
 }

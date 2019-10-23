@@ -1,3 +1,10 @@
+/**
+ * File              : ft_isascii.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 22.10.2019
+ * Last Modified Date: 22.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -13,53 +20,23 @@
 
 #include "testlib.h"
 
-void	test_ft_isascii(void)
+int	test_ft_isascii(void)
 {
-	int failed;
+	int failed = 0;
+	char *name = "ft_isascii";
+
 	char c1 = '1';
 	char c2 = 'a';
 	char c3 = ']';
 	char c4 = '{';
 	char c5 = 'Z';
-	char c6 = '\n';;
+	char c6 = '\n';
 
-	failed = 0;
-	if (ft_isascii((int)c1) != 1)
-	{
-		ft_printfail("[ft_isascii] test 1");
-		ft_printdiff_int(1, ft_isascii((int)c1));
-		++failed;
-	}
-	if (ft_isascii((int)c2) != 1)
-	{
-		ft_printfail("[ft_isascii] test 2");
-		ft_printdiff_int(1, ft_isascii((int)c2));
-		++failed;
-	}
-	if (ft_isascii((int)c3) != 1)
-	{
-		ft_printfail("[ft_isascii] test 3");
-		ft_printdiff_int(1, ft_isascii((int)c3));
-		++failed;
-	}
-	if (ft_isascii((int)c4) != 1)
-	{
-		ft_printfail("[ft_isascii] test 4");
-		ft_printdiff_int(1, ft_isascii((int)c4));
-		++failed;
-	}
-	if (ft_isascii((int)c5) != 1)
-	{
-		ft_printfail("[ft_isascii] test 5");
-		ft_printdiff_int(1, ft_isascii((int)c5));
-		++failed;
-	}
-	if (ft_isascii((int)c6) != 1)
-	{
-		ft_printfail("[ft_isascii] test 1");
-		ft_printdiff_int(1, ft_isascii((int)c6));
-		++failed;
-	}
-	if (failed == 0)
-		ft_printpass("[ft_isascii] 6 tests.");
+	failed += test_int(1, ft_isascii(c1), name, "1");
+	failed += test_int(1, ft_isascii(c2), name, "a");
+	failed += test_int(1, ft_isascii(c3), name, "[");
+	failed += test_int(1, ft_isascii(c4), name, "{");
+	failed += test_int(1, ft_isascii(c5), name, "z");
+	failed += test_int(1, ft_isascii(c6), name, "newline");
+	return (failed);
 }

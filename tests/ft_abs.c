@@ -1,3 +1,10 @@
+/**
+ * File              : ft_abs.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 22.10.2019
+ * Last Modified Date: 22.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,36 +18,21 @@
 /* ************************************************************************** */
 
 #include "testlib.h"
+#include <stdlib.h>
 
-void	test_ft_abs(void)
+int	test_ft_abs(void)
 {
-	int failed;
+	int failed = 0;
+	char *name = "ft_abs";
 
-	failed = 0;
-	if (ft_abs(-123) != 123)
-	{
-		ft_printfail("[ft_abs] test 1");
-		ft_printdiff_int(123, ft_abs(-123));
-		++failed;
-	}
-	if (ft_abs(0) != 0)
-	{
-		ft_printfail("[ft_abs] test 2");
-		ft_printdiff_int(0, ft_abs(0));
-		++failed;
-	}
-	if (ft_abs(1234) != 1234)
-	{
-		ft_printfail("[ft_abs] test 3");
-		ft_printdiff_int(1234, ft_abs(1234));
-		++failed;
-	}
-	if (ft_abs(-2147483648) != 2147483648)
-	{
-		ft_printfail("[ft_abs] test 4");
-		ft_printdiff_int(-2147483648, ft_abs(-2147483648));
-		++failed;
-	}
-	if (failed == 0)
-		ft_printpass("[ft_abs] 4 tests.");
+	int n1 = -123;
+	int n2 = 0;
+	int n3 = MIN_INT;
+	int n4 = MAX_INT;
+
+	failed += test_int(abs(n1), ft_abs(n1), name, "normal negative");
+	failed += test_int(abs(n2), ft_abs(n2), name, "zero");
+	failed += test_int(abs(n3), ft_abs(n3), name, "min int");
+	failed += test_int(abs(n4), ft_abs(n4), name, "max int");
+	return (failed);
 }

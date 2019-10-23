@@ -7,21 +7,26 @@
  */
 
 #include "testlib.h"
+#include <stdio.h>
 
 int	main(void)
 {
-	test_ft_strlen();
-	test_ft_toupper();
-	test_ft_tolower();
-	test_ft_strcmp();
-	test_ft_abs();
-	test_ft_intlen();
-	test_ft_itoa();
-	test_ft_isalpha();
-	test_ft_isdigit();
-	test_ft_isalnum();
-	test_ft_isascii();
-	test_ft_isprint();
-	test_ft_atoi();
+	int failed = 0;
+
+	failed += test_ft_strlen();
+	failed += test_ft_toupper();
+	failed += test_ft_tolower();
+	failed += test_ft_strcmp();
+	failed += test_ft_abs();
+	failed += test_ft_intlen();
+	failed += test_ft_itoa();
+	failed += test_ft_isalpha();
+	failed += test_ft_isdigit();
+	failed += test_ft_isalnum();
+	failed += test_ft_isascii();
+	failed += test_ft_isprint();
+	failed += test_ft_atoi();
+
+	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);
 }

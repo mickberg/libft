@@ -1,3 +1,10 @@
+/**
+ * File              : ft_itoa.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 22.10.2019
+ * Last Modified Date: 23.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -12,39 +19,19 @@
 
 #include "testlib.h"
 
-void	test_ft_itoa(void)
+int	test_ft_itoa(void)
 {
-	int failed;
+	int failed = 0;
+	char *name = "ft_itoa";
+
 	int n1 = -2147483648;
 	int n2 = 0;
 	int n3 = 123456;
 	int n4 = -123;
 
-	failed = 0;
-	if (ft_strcmp(ft_itoa(n1), "-2147483648") != 0)
-	{
-		ft_printfail("[ft_itoa] test 1");
-		ft_printdiff_str("-2147483648", ft_itoa(n1));
-		++failed;
-	}
-	if (ft_strcmp(ft_itoa(n2), "0") != 0)
-	{
-		ft_printfail("[ft_itoa] test 2");
-		ft_printdiff_str("0", ft_itoa(n2));
-		++failed;
-	}
-	if (ft_strcmp(ft_itoa(n3), "123456") != 0)
-	{
-		ft_printfail("[ft_itoa] test 3");
-		ft_printdiff_str("123456", ft_itoa(n3));
-		++failed;
-	}
-	if (ft_strcmp(ft_itoa(n4), "-123") != 0)
-	{
-		ft_printfail("[ft_itoa] test 4");
-		ft_printdiff_str("-123", ft_itoa(n4));
-		++failed;
-	}
-	if (failed == 0)
-		ft_printpass("[ft_itoa] 4 tests.");
+	failed += test_str("-2147483648", ft_itoa(n1), name, "min int");
+	failed += test_str("0", ft_itoa(n2), name, "zero");
+	failed += test_str("123456", ft_itoa(n3), name, "normal pos");
+	failed += test_str("-123", ft_itoa(n4), name, "normal neg");
+	return (failed);
 }

@@ -1,3 +1,10 @@
+/**
+ * File              : ft_isalnum.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 22.10.2019
+ * Last Modified Date: 22.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -12,53 +19,23 @@
 
 #include "testlib.h"
 
-void	test_ft_isalnum(void)
+int	test_ft_isalnum(void)
 {
-	int failed;
-	char c1 = '1';
-	char c2 = 'a';
-	char c3 = ']';
-	char c4 = '{';
-	char c5 = 'Z';
-	char c6 = '\n';;
+	int		failed = 0;
+	char	*name = "ft_isalnum";
 
-	failed = 0;
-	if (ft_isalnum((int)c1) != 1)
-	{
-		ft_printfail("[ft_isalnum] test 1");
-		ft_printdiff_int(1, ft_isalnum((int)c1));
-		++failed;
-	}
-	if (ft_isalnum((int)c2) != 1)
-	{
-		ft_printfail("[ft_isalnum] test 2");
-		ft_printdiff_int(1, ft_isalnum((int)c2));
-		++failed;
-	}
-	if (ft_isalnum((int)c3) != 0)
-	{
-		ft_printfail("[ft_isalnum] test 3");
-		ft_printdiff_int(0, ft_isalnum((int)c3));
-		++failed;
-	}
-	if (ft_isalnum((int)c4) != 0)
-	{
-		ft_printfail("[ft_isalnum] test 4");
-		ft_printdiff_int(0, ft_isalnum((int)c4));
-		++failed;
-	}
-	if (ft_isalnum((int)c5) != 1)
-	{
-		ft_printfail("[ft_isalnum] test 5");
-		ft_printdiff_int(1, ft_isalnum((int)c5));
-		++failed;
-	}
-	if (ft_isalnum((int)c6) != 0)
-	{
-		ft_printfail("[ft_isalnum] test 1");
-		ft_printdiff_int(0, ft_isalnum((int)c6));
-		++failed;
-	}
-	if (failed == 0)
-		ft_printpass("[ft_isalnum] 6 tests.");
+	char	c1 = '1';
+	char	c2 = 'a';
+	char	c3 = ']';
+	char	c4 = '{';
+	char	c5 = 'Z';
+	char	c6 = '\n';;
+
+	failed += test_int(1, ft_isalnum(c1), name, "1");
+	failed += test_int(1, ft_isalnum(c2), name, "a");
+	failed += test_int(0, ft_isalnum(c3), name, "]");
+	failed += test_int(0, ft_isalnum(c4), name, "1");
+	failed += test_int(1, ft_isalnum(c5), name, "z");
+	failed += test_int(0, ft_isalnum(c6), name, "newline");
+	return (failed);
 }
