@@ -28,6 +28,7 @@ int		test_ft_isalnum(void);
 int		test_ft_isascii(void);
 int		test_ft_isprint(void);
 int		test_ft_atoi(void);
+int		test_ft_strcat(void);
 
 int		test_int(int ex, int test, char *name, char *test_id);
 int		test_str(char *ex, char *test, char *name, char *test_id);
