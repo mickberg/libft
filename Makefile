@@ -14,8 +14,9 @@ INC_DIR = tests/includes
 
 # Files, library and tests
 SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_abs.c \
-	 ft_intlen.c ft_itoa.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
-	 ft_isprint.c ft_atoi.c ft_strcat.c ft_strncat.c ft_strstr.c ft_strnstr.c
+	ft_intlen.c ft_itoa.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+	ft_isprint.c ft_atoi.c ft_strcat.c ft_strncat.c ft_strstr.c ft_strnstr.c \
+	ft_strchr.c
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 TEST_SRCS = $(addprefix $(TEST_DIR), $(SRCS) test_main.c testers.c)
 TEST_OBJS = $(addprefix $(TEST_OBJ_DIR), $(SRCS:.c=.o) test_main.o testers.o)
