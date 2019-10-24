@@ -40,14 +40,14 @@ int	test_char(char ex, char test, char *name, char *test_id)
 
 int	test_str(char *ex, char *test, char *name, char *test_id)
 {
-	if (strcmp(ex, test) != 0)
-	{
-		printf("Failed [%s] [%s]\n - Expected [%s] got [%s]\n", name, test_id, ex, test);
-		return (1);
-	}
-	else
+	if ((ex == NULL && test == NULL) || (ex != NULL && test != NULL && strcmp(ex, test) == 0))
 	{
 		printf("Passed [%s] [%s]\n", name, test_id);
 		return (0);
+	}
+	else
+	{
+		printf("Failed [%s] [%s]\n - Expected [%s] got [%s]\n", name, test_id, ex, test);
+		return (1);
 	}
 }
