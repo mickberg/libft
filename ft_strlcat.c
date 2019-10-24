@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 19:25:07 by mberglun          #+#    #+#             */
-/*   Updated: 2019/10/24 19:57:20 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/10/24 20:00:07 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (l++ > n && *src != '\0')
 		*dst++ = *src++;
 	*dst = '\0';
-	return (dstlen + l);
+	return (dstlen + l - 1);
 }
