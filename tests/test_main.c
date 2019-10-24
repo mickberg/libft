@@ -30,7 +30,7 @@ int	main(void)
 	failed += test_ft_strcat();
 	failed += test_ft_strncat();
 	failed += test_ft_strstr();
-
+	failed += test_ft_strnstr();
 
 	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);
