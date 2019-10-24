@@ -20,6 +20,7 @@ int		test_ft_strlen(void);
 int		test_ft_toupper(void);
 int		test_ft_tolower(void);
 int		test_ft_strcmp(void);
+int		test_ft_strncmp(void);
 int		test_ft_abs(void);
 int		test_ft_intlen(void);
 int		test_ft_itoa(void);

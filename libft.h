@@ -2,7 +2,7 @@
  * File              : libft.h
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
- * Last Modified Date: 23.10.2019
+ * Last Modified Date: 24.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
@@ -15,6 +15,7 @@ unsigned long		ft_strlen(char *str);
 unsigned int		ft_toupper(unsigned int c);
 unsigned int		ft_tolower(unsigned int c);
 int					ft_strcmp(char *s1, char *s2);
+int					ft_strncmp(char *s1, char *s2, size_t n);
 long				ft_abs(int nb);
 int					ft_intlen(int nb);
 char				*ft_itoa(int nb);

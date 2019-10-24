@@ -17,6 +17,7 @@ int	main(void)
 	failed += test_ft_toupper();
 	failed += test_ft_tolower();
 	failed += test_ft_strcmp();
+	failed += test_ft_strncmp();
 	failed += test_ft_abs();
 	failed += test_ft_intlen();
 	failed += test_ft_itoa();
