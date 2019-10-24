@@ -36,6 +36,7 @@ int		test_ft_strncat(void);
 int		test_ft_strstr(void);
 int		test_ft_strnstr(void);
 int		test_ft_strchr(void);
+int		test_ft_strrchr(void);
 
 int		test_int(int ex, int test, char *name, char *test_id);
 int		test_str(char *ex, char *test, char *name, char *test_id);

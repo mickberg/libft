@@ -32,6 +32,7 @@ int	main(void)
 	failed += test_ft_strstr();
 	failed += test_ft_strnstr();
 	failed += test_ft_strchr();
+	failed += test_ft_strrchr();
 
 	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);
