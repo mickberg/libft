@@ -2,9 +2,11 @@
  * File              : ft_strncat.c
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
- * Last Modified Date: 23.10.2019
+ * Last Modified Date: 24.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
+
+#include "libft.h"
 
 char	*ft_strncat(char *s1, char *s2, size_t n)
 {

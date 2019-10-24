@@ -2,7 +2,7 @@
  * File              : test_main.c
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
- * Last Modified Date: 23.10.2019
+ * Last Modified Date: 24.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
@@ -27,6 +27,7 @@ int	main(void)
 	failed += test_ft_isprint();
 	failed += test_ft_atoi();
 	failed += test_ft_strcat();
+	failed += test_ft_strncat();
 
 	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);

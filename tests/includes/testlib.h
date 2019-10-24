@@ -2,7 +2,7 @@
  * File              : testlib.h
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
- * Last Modified Date: 23.10.2019
+ * Last Modified Date: 24.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
@@ -13,6 +13,7 @@
 #define MAX_INT 2147483647;
 
 #include <unistd.h>
+#include <stdio.h>
 #include "../../libft.h"
 
 int		test_ft_strlen(void);
@@ -29,6 +30,7 @@ int		test_ft_isascii(void);
 int		test_ft_isprint(void);
 int		test_ft_atoi(void);
 int		test_ft_strcat(void);
+int		test_ft_strncat(void);
 
 int		test_int(int ex, int test, char *name, char *test_id);
 int		test_str(char *ex, char *test, char *name, char *test_id);
