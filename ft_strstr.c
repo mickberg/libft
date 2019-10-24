@@ -6,12 +6,26 @@
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
+#include "libft.h"
+
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	if (*haystack != *needle)
-		return (NULL);
-	else
+	const char	*str;
+	const char	*need;
+
+	if (*needle == '\0')
+		return ((char*)haystack);
+
+	while (*haystack != '\0')
 	{
-		return (ft_strstr(haystack + 1, needle + 1));
+		str = haystack;
+		need = needle;
+		while (*str++ == *need++)
+		{
+			if (*need == '\0')
+				return ((char*)haystack);
+		}
+		++haystack;
 	}
+	return (NULL);
 }

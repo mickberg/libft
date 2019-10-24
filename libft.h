@@ -27,5 +27,6 @@ int					ft_isprint(int c);
 int					ft_atoi(char *str);
 char				*ft_strcat(char *s1, char *s2);
 char				*ft_strncat(char *s1, char *s2, size_t n);
+char				*ft_strstr(const char *haystack, const char *needle);
 
 #endif
