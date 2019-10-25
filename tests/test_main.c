@@ -34,6 +34,8 @@ int	main(void)
 	failed += test_ft_strchr();
 	failed += test_ft_strrchr();
 	failed += test_ft_strlcat();
+	failed += test_ft_strcpy();
+	failed += test_ft_strncpy();
 
 	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);
