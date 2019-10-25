@@ -43,6 +43,7 @@ int		test_ft_strncpy(void);
 int		test_ft_strdup(void);
 int		test_ft_strndup(void);
 int		test_ft_memccpy(void);
+int		test_ft_memset(void);
 
 int		test_int(int ex, int test, char *name, char *test_id);
 int		test_str(char *ex, char *test, char *name, char *test_id);
