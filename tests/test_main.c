@@ -39,6 +39,7 @@ int	main(void)
 	failed += test_ft_strdup();
 	failed += test_ft_strndup();
 	failed += test_ft_memccpy();
+	failed += test_ft_memset();
 
 	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);
