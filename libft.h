@@ -37,6 +37,6 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strdup(const char *str);
 char				*ft_strndup(const char *str, size_t len);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
-voidd				*ft_memset(void *b, int c, size_t len);
+void				*ft_memset(void *b, int c, size_t len);
 
 #endif
