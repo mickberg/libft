@@ -1,3 +1,10 @@
+/**
+ * File              : ft_strlcat.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 24.10.2019
+ * Last Modified Date: 25.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,23 +18,33 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	n;
 	size_t	l;
+	size_t	srclen;
+
 	// move dst pointer to end of string
 	dstlen = ft_strlen(dst);
+	srclen = ft_strlen((char*)src);
+	dst += dstlen;
 
 	// return the size the caller tried to concatenate
 	if ((dstlen + 1) >= dstsize)
-		return (dstlen + ft_strlen((char*)src));
+		return (dstlen + srclen);
+
 	n = dstsize - dstlen - 1;
 	// concatenate
 	l = 0;
-	while (l++ > n && *src != '\0')
-		*dst++ = *src++;
+	while (l++ < n && *src != '\0')
+	{
+		*dst = *src;
+		++dst;
+		++src;
+	}
 	*dst = '\0';
-	return (dstlen + l - 1);
+	return (dstlen + srclen);
 }

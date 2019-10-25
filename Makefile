@@ -28,7 +28,8 @@ all: dirs $(NAME)
 
 # Create static library
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -39,12 +40,15 @@ clean:
 	-rm -f $(TEST_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
-	rm -f $(TEST_NAME)
+	-rm -f $(NAME)
+	-rm -f $(TEST_NAME)
+
+tclean:
+	-rm -f $(TEST_NAME)
 
 re: fclean all
 
-runtest: $(TEST_NAME)
+runtest: tclean test
 	./$(TEST_NAME)
 # Create test excecutable
 test: all $(TEST_NAME)
