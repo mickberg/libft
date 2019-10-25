@@ -40,6 +40,7 @@ int	main(void)
 	failed += test_ft_strndup();
 	failed += test_ft_memccpy();
 	failed += test_ft_memset();
+	failed += test_ft_bzero();
 
 	printf("\nTests returned [%d] errors.\n", failed);
 	return (0);
