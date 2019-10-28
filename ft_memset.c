@@ -1,3 +1,10 @@
+/**
+ * File              : ft_memset.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 28.10.2019
+ * Last Modified Date: 28.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -12,15 +19,16 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *dest, int c, size_t len)
 {
-	char	*i;
+	char			*d;
+	unsigned char	cc;
 
-	i = (char*)b;
+	cc = (unsigned char)c;
+	d = (char*)dest;
 	while (len--)
 	{
-		*i++ = ((unsigned char)c);
+		*d++ = cc;
 	}
-	*i = '\0';
-	return (b);
+	return (dest);
 }
