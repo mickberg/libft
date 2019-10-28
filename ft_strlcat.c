@@ -2,7 +2,7 @@
  * File              : ft_strlcat.c
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 24.10.2019
- * Last Modified Date: 25.10.2019
+ * Last Modified Date: 28.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 /* ************************************************************************** */
@@ -33,8 +33,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst += dstlen;
 
 	// return the size the caller tried to concatenate
-	if ((dstlen + 1) >= dstsize)
-		return (dstlen + srclen);
+	if (dstlen >= dstsize)
+		return (dstsize + srclen);
 
 	n = dstsize - dstlen - 1;
 	// concatenate
