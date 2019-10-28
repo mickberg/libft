@@ -1,3 +1,10 @@
+/**
+ * File              : ft_strncpy.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 28.10.2019
+ * Last Modified Date: 28.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -17,9 +24,12 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	char	*d;
 
 	d = dst;
-	while (*src != '\0' && len-- > 0)
-		*d++ = *src++;
-	while (*d != '\0')
-		*d++ = '\0';
+	while (len-- > 0)
+	{
+		*d = *src;
+		if (*src != '\0')
+			++src;
+		++d;
+	}
 	return (dst);
 }
