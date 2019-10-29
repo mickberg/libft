@@ -6,9 +6,7 @@
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 char *ft_itoa(int nb)
 {
