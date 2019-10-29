@@ -49,5 +49,6 @@ void				ft_memdel(void **ptr);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **ptr);
 void				ft_strclr(char *str);
+void				ft_striter(char *str, void (*f)(char*));
 
 #endif
