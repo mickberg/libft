@@ -10,6 +10,7 @@
 # define FT_LIBFT_H
 
 #include <stdlib.h>
+#include <unistd.h>
 
 unsigned long		ft_strlen(char *str);
 unsigned int		ft_toupper(unsigned int c);
@@ -59,5 +60,7 @@ char				*ft_strsub(char const *str, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *str);
 char				**ft_strsplit(char const *str, char c);
+void				ft_putchar(char c);
+void				ft_putstr(char const *str);
 
 #endif
