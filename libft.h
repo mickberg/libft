@@ -50,6 +50,7 @@ char				*ft_strnew(size_t size);
 void				ft_strdel(char **ptr);
 void				ft_strclr(char *str);
 void				ft_striter(char *str, void (*f)(char*));
-void				ft_striteri(char *str, void(*f)(unsigned int, char*));
+void				ft_striteri(char *str, void (*f)(unsigned int, char*));
+char				*ft_strmap(char const *str, char (*f)(char));
 
 #endif
