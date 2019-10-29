@@ -12,6 +12,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+char				*ft_strndup(const char *str, size_t len);
+double				ft_pow(double n, int exp);
+
 unsigned long		ft_strlen(char *str);
 unsigned int		ft_toupper(unsigned int c);
 unsigned int		ft_tolower(unsigned int c);
@@ -36,7 +39,6 @@ size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strdup(const char *str);
-char				*ft_strndup(const char *str, size_t len);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *b, size_t len);
@@ -62,5 +64,11 @@ char				*ft_strtrim(char const *str);
 char				**ft_strsplit(char const *str, char c);
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
+void				ft_putendl(char const *s);
+void				ft_putnbr(int n);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(char const *s, int fd);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 #endif
