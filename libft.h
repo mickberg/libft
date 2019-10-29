@@ -48,5 +48,6 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ptr);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **ptr);
+void				ft_strclr(char *str);
 
 #endif
