@@ -2,7 +2,7 @@
  * File              : libft.h
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 20.10.2019
- * Last Modified Date: 24.10.2019
+ * Last Modified Date: 29.10.2019
  * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
  */
 
@@ -39,5 +39,6 @@ char				*ft_strndup(const char *str, size_t len);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *b, size_t len);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
