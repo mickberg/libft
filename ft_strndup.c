@@ -1,3 +1,10 @@
+/**
+ * File              : ft_strndup.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 29.10.2019
+ * Last Modified Date: 29.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -16,14 +23,17 @@ char	*ft_strndup(const char *str, size_t n)
 {
 	char	*dup;
 	char	*d;
+	size_t	strlen;
 
+	strlen = ft_strlen((char*)str);
+	if (strlen < n)
+		n = strlen;
 	dup = (char*)malloc(sizeof(char) * n + 1);
 	if (!dup)
 		return (NULL);
 	d = dup;
-	while (n-- > 0 && *str != '\0')
-		*d++ = *str++;
-	while (n-- > -1)
-		*d++ = '\0';
+	while (*str != '\0' && n--)
+		*d++ = (char)*str++;
+	*d = '\0';
 	return (dup);
 }
