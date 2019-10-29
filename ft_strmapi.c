@@ -1,5 +1,5 @@
 /**
- * File              : ft_strmap.c
+ * File              : ft_strmapi.c
  * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
  * Date              : 29.10.2019
  * Last Modified Date: 29.10.2019
@@ -8,7 +8,7 @@
 
 #include "libft.h"
 
-char	*ft_strmap(char const *str, char (*f)(char))
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
 	char			*mapped;
 	unsigned int	i;
@@ -19,7 +19,7 @@ char	*ft_strmap(char const *str, char (*f)(char))
 	i = 0;
 	while (str[i] != '\0')
 	{
-		mapped[i] = f(str[i]);
+		mapped[i] = f(i, str[i]);
 		++i;
 	}
 	return (mapped);

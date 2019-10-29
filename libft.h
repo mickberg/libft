@@ -52,5 +52,6 @@ void				ft_strclr(char *str);
 void				ft_striter(char *str, void (*f)(char*));
 void				ft_striteri(char *str, void (*f)(unsigned int, char*));
 char				*ft_strmap(char const *str, char (*f)(char));
+char				*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 
 #endif
