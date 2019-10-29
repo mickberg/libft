@@ -1,10 +1,14 @@
-/**
- * File              : ft_strjoin.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 29.10.2019
- * Last Modified Date: 29.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mikaelberglund <marvin@42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/29 17:01:07 by mikaelber         #+#    #+#             */
+/*   Updated: 2019/10/29 17:01:09 by mikaelber        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 

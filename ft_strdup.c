@@ -1,3 +1,10 @@
+/**
+ * File              : ft_strdup.c
+ * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
+ * Date              : 29.10.2019
+ * Last Modified Date: 29.10.2019
+ * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
+ */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -19,7 +26,7 @@ char	*ft_strdup(const char *str)
 	size_t	len;
 
 	len = ft_strlen((char*)str);
-	dup = (char*)malloc(sizeof(char) * len + 1);
+	dup = (char*)malloc(sizeof(char) * (len + 1));
 	if (!dup)
 		return (NULL);
 	d = dup;
