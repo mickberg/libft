@@ -13,7 +13,7 @@ char	*ft_strmap(char const *str, char (*f)(char))
 	char			*mapped;
 	unsigned int	i;
 
-	mapped = ft_strnew(ft_strlen((char*)str) + 1);
+	mapped = ft_strnew(ft_strlen((char*)str));
 	if (!mapped)
 		return (NULL);
 	i = 0;
