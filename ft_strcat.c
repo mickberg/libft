@@ -1,10 +1,14 @@
-/**
- * File              : ft_strcat.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 20.10.2019
- * Last Modified Date: 24.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:08:31 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:08:33 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strcat(char *s1, char *s2)
 {

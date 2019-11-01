@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 14:36:35 by mberglun          #+#    #+#             */
-/*   Updated: 2019/10/22 14:53:47 by mberglun         ###   ########.fr       */
+/*   Created: 2019/11/01 20:04:35 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:04:45 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

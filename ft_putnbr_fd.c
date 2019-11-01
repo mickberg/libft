@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikaelberglund <marvin@42.fr>              +#+  +:+       +#+        */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/29 17:58:21 by mikaelber         #+#    #+#             */
-/*   Updated: 2019/10/29 19:28:24 by mikaelber        ###   ########.fr       */
+/*   Created: 2019/11/01 20:08:13 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:08:20 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('0', fd);
 		return ;
 	}
-
 	exp = (int)ft_pow(10, len - 1);
 	while (exp > 0)
 	{

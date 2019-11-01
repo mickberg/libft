@@ -1,10 +1,14 @@
-/**
- * File              : ft_strnequ.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 29.10.2019
- * Last Modified Date: 29.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:10:22 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:10:24 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 

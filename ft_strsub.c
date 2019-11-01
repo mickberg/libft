@@ -1,10 +1,14 @@
-/**
- * File              : ft_strsub.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 29.10.2019
- * Last Modified Date: 29.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:11:07 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:11:08 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 

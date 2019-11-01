@@ -1,10 +1,15 @@
-/**
- * File              : ft_strcmp.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 22.10.2019
- * Last Modified Date: 22.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:08:50 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:08:53 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int		ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 == *s2)

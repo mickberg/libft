@@ -1,10 +1,14 @@
-/**
- * File              : ft_atoi.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 22.10.2019
- * Last Modified Date: 28.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:03:08 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:03:19 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {

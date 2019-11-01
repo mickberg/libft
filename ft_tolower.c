@@ -1,10 +1,14 @@
-/**
- * File              : ft_tolower.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 20.10.2019
- * Last Modified Date: 20.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:11:23 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:11:24 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int ft_tolower(int c)
 {

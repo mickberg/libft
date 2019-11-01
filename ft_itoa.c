@@ -1,14 +1,18 @@
-/**
- * File              : ft_itoa.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 22.10.2019
- * Last Modified Date: 22.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:04:49 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:04:57 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_itoa(int nb)
+char	*ft_itoa(int nb)
 {
 	long	num;
 	int		len;

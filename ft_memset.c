@@ -1,10 +1,3 @@
-/**
- * File              : ft_memset.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 28.10.2019
- * Last Modified Date: 28.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -12,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 18:47:40 by mberglun          #+#    #+#             */
-/*   Updated: 2019/10/25 19:31:54 by mberglun         ###   ########.fr       */
+/*   Created: 2019/11/01 20:07:15 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:07:20 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

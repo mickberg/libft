@@ -1,10 +1,14 @@
-/**
- * File              : ft_toupper.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 20.10.2019
- * Last Modified Date: 20.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:11:27 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:11:33 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 unsigned int	ft_toupper(unsigned int c)
 {

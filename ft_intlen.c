@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 12:40:27 by mberglun          #+#    #+#             */
-/*   Updated: 2019/10/22 13:20:17 by mberglun         ###   ########.fr       */
+/*   Created: 2019/11/01 20:03:41 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:03:49 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_intlen(int nb)
+int	ft_intlen(int nb)
 {
 	long num;
 	int len;

@@ -1,10 +1,14 @@
-/**
- * File              : ft_memcmp.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 29.10.2019
- * Last Modified Date: 29.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/01 20:06:29 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:06:40 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -15,7 +19,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	str1 = (char*)s1;
 	str2 = (char*)s2;
-
 	while (n--)
 	{
 		if (*str1 != *str2)
@@ -23,6 +26,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		++str1;
 		++str2;
 	}
-
 	return (0);
 }

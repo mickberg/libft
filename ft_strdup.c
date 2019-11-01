@@ -1,10 +1,3 @@
-/**
- * File              : ft_strdup.c
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 29.10.2019
- * Last Modified Date: 29.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -12,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 16:34:32 by mberglun          #+#    #+#             */
-/*   Updated: 2019/10/25 16:41:34 by mberglun         ###   ########.fr       */
+/*   Created: 2019/11/01 20:09:06 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/01 20:09:08 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
