@@ -12,6 +12,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+typedef	struct	s_slist
+{
+	void			*content;
+	size_t			content_size;
+	struct	s_list	*next;
+}				t_list;
+
 char				*ft_strndup(const char *str, size_t len);
 double				ft_pow(double n, int exp);
 
@@ -70,5 +77,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+
+t_list				*ft_lstnew(void const *content, size_t content_size);
 
 #endif
