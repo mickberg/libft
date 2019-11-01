@@ -6,61 +6,61 @@
 /*   By: mikaelberglund <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 17:07:46 by mikaelber         #+#    #+#             */
-/*   Updated: 2019/10/29 17:45:32 by mikaelber        ###   ########.fr       */
+/*   Updated: 2019/11/01 10:55:41 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_concatmatch(char **matches, const char *str)
+static char	**ft_truncate(char ***oldarr, char *str)
 {
 	char	**conc;
-	char	**strings;
-	size_t	len;
+	char	**arr;
+	int		len;
 
-	if (str == NULL)
-		return (NULL);
-	strings = (char**)*matches;
+	arr = *oldarr;
 	len = 0;
-	while (matches[len] != NULL)
+	while (arr[len] != NULL)
 		++len;
-	conc = (char**)malloc(sizeof(char*) * len + 2);
+	conc = (char**)malloc(sizeof(char*) * (len + 2));
 	if (!conc)
-	{
-		ft_memdel((void**)matches);
 		return (NULL);
-	}
-	conc[len] = (char*)str;
+	conc[0] = str;
 	conc[len + 1] = NULL;
-	ft_memmove(conc, matches, len);
-	ft_memdel((void**)matches);
+	while (len > 0)
+	{
+		conc[len] = arr[len -1];
+		--len;
+	}
+	free(*oldarr);
+	*oldarr = NULL;
 	return (conc);
 }
 
-char		**ft_strsplit(char const *str, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	char		**strings;
-	char		*match;
-	size_t		start;
-	size_t		end;
+	char	**ret;
+	char	*sub;
+	size_t	start;
+	size_t	end;
 
 	start = 0;
-	while (str[start] != '\0' && str[start] != c)
+	while (s[start] != '\0' && s[start] == c)
 		++start;
 	end = start;
-	while (str[end] != '\0' && str[end] != c)
+	while (s[end] != '\0' && s[end] != c)
 		++end;
-	if (start == '\0')
+	if (s[start] == '\0')
 	{
-		strings = (char**)malloc(sizeof(char*));
-		if (!strings)
+		ret = (char**)malloc(sizeof(char*) * 1);
+		if (!ret)
 			return (NULL);
-		strings[0] = NULL;
-		return (strings);
+		ret[0] = NULL;
+		return ret;
 	}
-	match = ft_strsub(str, start, end - start);
-	if (!match)
+	sub = ft_strsub(s, start, end - start);
+	ret = ft_strsplit(s + end, c);
+	if (ret == NULL || sub == NULL)
 		return (NULL);
-	strings = ft_strsplit(str + end, c);
-	return ft_concatmatch(strings, match);
+	return (ft_truncate(&ret, sub));
 }
