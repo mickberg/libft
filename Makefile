@@ -6,7 +6,7 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2019/11/02 17:10:50 by mberglun         ###   ########.fr        #
+#    Updated: 2019/11/02 17:12:02 by mberglun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 
 clean:
 	-rm -f $(OBJS)
-	-rm -f $(OBJ_DIR)
+	-rm -rf $(OBJ_DIR)
 
 fclean: clean
 	-rm -f $(NAME)
