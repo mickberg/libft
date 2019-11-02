@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:11:12 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:11:14 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/02 17:00:17 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ char	*ft_strtrim(char const *str)
 	size_t	tmp;
 
 	start = 0;
-	while ((str[start] == 32 || str[start] == 10 || str[start] == 9) && str[start] != '\0')
+	while ((str[start] == 32 || str[start] == 10 ||
+		str[start] == 9) && str[start] != '\0')
+	{
 		++start;
+	}
 	tmp = start;
 	end = start;
 	while (str[tmp] != '\0')

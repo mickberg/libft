@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:11:07 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:11:08 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/02 16:55:59 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*ft_strsub(char const *str, unsigned int start, size_t len)
 	}
 	return (sub);
 }
-

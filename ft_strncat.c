@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:10:03 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:10:05 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/02 16:54:58 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char	*ft_strncat(char *s1, char *s2, size_t n)
 		++s2;
 	}
 	*s1_tmp = '\0';
-	return s1;
+	return (s1);
 }

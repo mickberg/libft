@@ -1,23 +1,27 @@
-/**
- * File              : libft.h
- * Author            : Mikael Berglund <mikael.berglund2@gmail.com>
- * Date              : 20.10.2019
- * Last Modified Date: 29.10.2019
- * Last Modified By  : Mikael Berglund <mikael.berglund2@gmail.com>
- */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
+/*   Updated: 2019/11/02 17:11:04 by mberglun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-typedef	struct	s_list
+typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
-	struct	s_list	*next;
-}				t_list;
+	struct s_list	*next;
+}					t_list;
 
 char				*ft_strndup(const char *str, size_t len);
 double				ft_pow(double n, int exp);
@@ -39,7 +43,8 @@ int					ft_atoi(char *str);
 char				*ft_strcat(char *s1, char *s2);
 char				*ft_strncat(char *s1, char *s2, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
-char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char				*ft_strnstr(const char *haystack,
+									const char *needle, size_t len);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);

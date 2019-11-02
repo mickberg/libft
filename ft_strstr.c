@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:11:03 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:11:05 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/02 16:55:35 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strstr(const char *haystack, const char *needle)
 
 	if (*needle == '\0')
 		return ((char*)haystack);
-
 	while (*haystack != '\0')
 	{
 		str = haystack;

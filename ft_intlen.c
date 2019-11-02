@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:03:41 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:03:49 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/02 16:53:46 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_intlen(int nb)
 {
-	long num;
-	int len;
+	long	num;
+	int		len;
 
 	num = ft_abs(nb);
 	if (num == 0)

@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:10:57 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:11:01 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/02 16:59:25 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static char	**ft_truncate(char ***oldarr, char *str)
 	conc[len + 1] = NULL;
 	while (len > 0)
 	{
-		conc[len] = arr[len -1];
+		conc[len] = arr[len - 1];
 		--len;
 	}
 	free(*oldarr);
@@ -56,7 +56,7 @@ char		**ft_strsplit(char const *s, char c)
 		if (!ret)
 			return (NULL);
 		ret[0] = NULL;
-		return ret;
+		return (ret);
 	}
 	sub = ft_strsub(s, start, end - start);
 	ret = ft_strsplit(s + end, c);
