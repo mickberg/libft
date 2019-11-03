@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:04:49 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:04:57 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/03 16:10:49 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_itoa(int nb)
 	if (nb < 0)
 		++len;
 	str = (char*)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
 	if (nb < 0)
 		str[0] = '-';
 	else if (nb == 0)
