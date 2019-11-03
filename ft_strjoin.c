@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:09:26 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:09:28 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/03 16:18:17 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1_len = ft_strlen((char*)s1);
 	s2_len = ft_strlen((char*)s2);
-	joined = ft_strnew(s1_len + s2_len + 1);
+	joined = ft_strnew(s1_len + s2_len);
 	if (!joined)
 		return (NULL);
 	ft_memmove(joined, s1, s1_len);

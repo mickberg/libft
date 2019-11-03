@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:11:07 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/02 16:55:59 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/03 16:16:36 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strsub(char const *str, unsigned int start, size_t len)
 	char	*sub;
 	size_t	i;
 
-	sub = ft_strnew(len + 1);
+	sub = ft_strnew(len);
 	if (!sub)
 		return (NULL);
 	sub[len] = '\0';
