@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:07:01 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:07:11 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:37:26 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	i = 0;
 	while (i < n)
-		*dest++ = buffer[i++];
+	{
+		dest[i] = buffer[i];
+		++i;
+	}
 	return (dst);
 }
