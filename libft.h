@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/02 17:11:04 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:46:39 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ typedef struct		s_list
 
 char				*ft_strndup(const char *str, size_t len);
 double				ft_pow(double n, int exp);
+int					ft_intlen(int nb);
 
-unsigned long		ft_strlen(char *str);
-unsigned int		ft_toupper(unsigned int c);
-unsigned int		ft_tolower(unsigned int c);
-int					ft_strcmp(char *s1, char *s2);
+size_t				ft_strlen(char *str);
+int					ft_toupper(int c);
+int					ft_tolower(int c);
+int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(char *s1, char *s2, size_t n);
 long				ft_abs(int nb);
-int					ft_intlen(int nb);
 char				*ft_itoa(int nb);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -51,7 +51,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strdup(const char *str);
-void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *b, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -73,7 +73,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t len);
 char				*ft_strsub(char const *str, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *str);
-char				**ft_strsplit(char const *str, char c);
+char				**ft_strsplit(char const *s, char c);
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
 void				ft_putendl(char const *s);
