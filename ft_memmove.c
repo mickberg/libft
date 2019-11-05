@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:07:01 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/05 17:37:26 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:45:18 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char	*dest;
 	char	*source;
-	char	buffer[n];
+	char	*buffer;
 	size_t	i;
 
+	buffer = (char*)malloc(sizeof(char) * n);
 	dest = (char*)dst;
 	source = (char*)src;
 	i = 0;
@@ -33,5 +34,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		dest[i] = buffer[i];
 		++i;
 	}
+	free(buffer);
+	buffer = NULL;
 	return (dst);
 }
