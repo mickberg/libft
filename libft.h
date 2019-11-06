@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/05 16:46:39 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/05 21:18:17 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct		s_list
 char				*ft_strndup(const char *str, size_t len);
 double				ft_pow(double n, int exp);
 int					ft_intlen(int nb);
+t_list				*ft_lstfind(t_list *lst, int (*f)(void *, size_t));
 
 size_t				ft_strlen(char *str);
 int					ft_toupper(int c);
