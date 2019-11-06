@@ -6,11 +6,12 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:06:10 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:06:16 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/06 19:04:16 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
@@ -19,13 +20,11 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 
 	d = dst;
 	s = src;
-	while ((unsigned char)*s != (unsigned char)c && n-- > 0)
+	while (n--)
 	{
 		*d++ = *s++;
+		if ((unsigned char)*(s - 1) == (unsigned char)c)
+			return (d);
 	}
-	if ((unsigned char)*s != (unsigned char)c)
-		return (NULL);
-	*d = *s;
-	++d;
-	return (d);
+	return (NULL);
 }
