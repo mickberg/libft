@@ -6,11 +6,11 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 16:54:34 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/02 16:54:46 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/08 23:05:23 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *s1, char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	char *s1_tmp;
 
@@ -19,9 +19,7 @@ char	*ft_strcat(char *s1, char *s2)
 		++s1_tmp;
 	while (*s2 != '\0')
 	{
-		*s1_tmp = *s2;
-		++s1_tmp;
-		++s2;
+		*s1_tmp++ = *s2++;
 	}
 	*s1_tmp = '\0';
 	return (s1);
