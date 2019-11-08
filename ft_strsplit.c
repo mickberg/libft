@@ -6,17 +6,18 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:10:57 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/02 16:59:25 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/08 22:40:31 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static char	**ft_truncate(char ***oldarr, char *str)
 {
 	char	**conc;
 	char	**arr;
-	int		len;
+	size_t	len;
 
 	arr = *oldarr;
 	len = 0;

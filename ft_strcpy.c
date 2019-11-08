@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:08:56 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:08:58 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/08 22:35:02 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strcpy(char *dst, const char *src)
 	d = dst;
 	while (*src != '\0')
 		*d++ = *src++;
-	if (*d)
-		*d = '\0';
+	*d = '\0';
 	return (dst);
 }
