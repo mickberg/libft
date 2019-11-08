@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:03:26 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:03:31 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/08 17:51:52 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_bzero(void *b, size_t len)
 {
-	char	*str;
-
-	str = (char*)b;
-	while (len--)
-		*str++ = 0;
+	ft_memset(b, 0, len);
 }
