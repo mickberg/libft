@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/08 23:04:30 by mikaelber        ###   ########.fr       */
+/*   Updated: 2019/11/08 23:12:07 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_atoi(char *str);
 char				*ft_strcat(char *s1, const char *s2);
-char				*ft_strncat(char *s1, char *s2, size_t n);
+char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack,
 									const char *needle, size_t len);

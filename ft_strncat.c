@@ -6,13 +6,13 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:10:03 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/02 16:54:58 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/08 23:13:59 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strncat(char *s1, char *s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	char *s1_tmp;
 
