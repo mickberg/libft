@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:06:43 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/08 21:23:30 by mikaelber        ###   ########.fr       */
+/*   Updated: 2019/11/11 15:27:08 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	s = (const char*)src;
 	while (n--)
 		*d++ = *s++;
-	return (d);
+	return (dst);
 }

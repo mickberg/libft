@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:05:38 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:05:55 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/11 15:57:10 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		cpy = ft_memalloc(content_size);
+		if (!cpy)
+		{
+			ft_memdel((void**)&item);
+			return (NULL);
+		}
 		item->content = ft_memcpy(cpy, content, content_size);
 		item->content_size = content_size;
 	}
