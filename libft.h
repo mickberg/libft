@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/11 17:37:22 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/11 17:39:42 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char				*ft_strndup(const char *str, size_t len);
 double				ft_pow(double n, int exp);
 int					ft_intlen(int nb);
 
-unsigned long		ft_strlen(char *str);
+size_t				ft_strlen(char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_strcmp(const char *s1, const char *s2);
