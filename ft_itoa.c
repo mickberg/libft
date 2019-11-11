@@ -6,11 +6,12 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:04:49 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/03 16:10:49 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/11 17:42:26 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_itoa(int nb)
 {

@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/11 17:39:42 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/11 17:53:55 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_LIBFT_H
 
 # include <stdlib.h>
-# include <unistd.h>
 
 typedef struct		s_list
 {

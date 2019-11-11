@@ -6,11 +6,9 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:09:15 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:09:17 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/11 17:48:34 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striter(char *str, void (*f)(char*))
 {
