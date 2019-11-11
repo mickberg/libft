@@ -6,7 +6,7 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2019/11/05 21:28:08 by mikaelber        ###   ########.fr        #
+#    Updated: 2019/11/11 16:26:01 by mberglun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 SRC_DIR = ./
-OBJ_DIR = objs/
+OBJ_DIR = ./
 SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_abs.c \
 	ft_intlen.c ft_itoa.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	ft_isprint.c ft_atoi.c ft_strcat.c ft_strncat.c ft_strstr.c ft_strnstr.c \
@@ -28,11 +28,10 @@ SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_abs.c \
 	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	ft_lstfind.c ft_pow.c ft_strndup.c
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
-MKDIR_P = mkdir -p
 
-.PHONY: dirs clean fclean re
+.PHONY: clean fclean re
 
-all: dirs $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
@@ -43,14 +42,8 @@ $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 
 clean:
 	-rm -f $(OBJS)
-	-rm -rf $(OBJ_DIR)
 
 fclean: clean
 	-rm -f $(NAME)
 
 re: fclean all
-
-dirs: $(OBJ_DIR)
-
-$(OBJ_DIR):
-	$(MKDIR_P) $(OBJ_DIR)
