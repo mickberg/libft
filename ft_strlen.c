@@ -6,18 +6,18 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:09:47 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/08 22:23:14 by mikaelber        ###   ########.fr       */
+/*   Updated: 2019/11/12 17:28:53 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
 	len = 0;
-	while (str[len] != '\0')
+	while (s[len] != '\0')
 	{
 		len += 1;
 	}

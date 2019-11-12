@@ -6,11 +6,11 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:03:08 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/01 20:03:19 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/12 17:58:52 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	long	num;
 	int		sign;
