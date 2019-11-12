@@ -6,13 +6,13 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:09:00 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/11 17:28:07 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/12 18:07:29 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **ptr)
+void	ft_strdel(char **as)
 {
-	ft_memdel((void**)ptr);
+	ft_memdel((void**)as);
 }

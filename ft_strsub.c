@@ -6,14 +6,14 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:11:07 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/11 17:52:53 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/12 18:11:04 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strsub(char const *str, unsigned int start, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
@@ -25,7 +25,7 @@ char	*ft_strsub(char const *str, unsigned int start, size_t len)
 	i = 0;
 	while (len--)
 	{
-		sub[i] = str[i + start];
+		sub[i] = s[i + start];
 		++i;
 	}
 	return (sub);

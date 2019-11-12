@@ -6,32 +6,32 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:11:12 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/11 17:53:31 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/12 18:11:48 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strtrim(char const *str)
+char	*ft_strtrim(char const *s)
 {
 	size_t	start;
 	size_t	end;
 	size_t	tmp;
 
 	start = 0;
-	while ((str[start] == 32 || str[start] == 10 ||
-		str[start] == 9) && str[start] != '\0')
+	while ((s[start] == 32 || s[start] == 10 ||
+		s[start] == 9) && s[start] != '\0')
 	{
 		++start;
 	}
 	tmp = start;
 	end = start;
-	while (str[tmp] != '\0')
+	while (s[tmp] != '\0')
 	{
-		if (str[tmp] != 32 && str[tmp] != 10 && str[tmp] != 9)
+		if (s[tmp] != 32 && s[tmp] != 10 && s[tmp] != 9)
 			end = tmp;
 		++tmp;
 	}
-	return (ft_strsub(str, start, end - start + 1));
+	return (ft_strsub(s, start, end - start + 1));
 }

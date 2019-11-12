@@ -6,18 +6,18 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:09:20 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/11 17:48:25 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/12 18:08:38 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *str, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		f(i, (str + i));
+		f(i, (s + i));
 		++i;
 	}
 }
