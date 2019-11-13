@@ -6,13 +6,13 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:03:26 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/12 17:21:50 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/13 16:11:29 by mberglun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, len);
+	ft_memset(s, 0, n);
 }
