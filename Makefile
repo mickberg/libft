@@ -6,7 +6,7 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2019/12/21 00:36:56 by mikaelber        ###   ########.fr        #
+#    Updated: 2020/01/17 08:49:22 by mikaelber        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,22 +32,20 @@ OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
 .PHONY: clean fclean re
 
-all: dirs $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
 
 $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I ./
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@ -I ./
 
 clean:
-	-rm -rf $(OBJ_DIR)
+	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	-rm -f $(NAME)
-
-dirs:
-	mkdir -p $(OBJ_DIR)
+	@rm -f $(NAME)
 
 re: fclean all
