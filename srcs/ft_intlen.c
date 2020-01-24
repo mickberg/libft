@@ -6,25 +6,18 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 20:03:41 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/02 16:53:46 by mberglun         ###   ########.fr       */
+/*   Updated: 2020/01/23 21:19:16 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int nb)
+int	ft_intlen(long long nb)
 {
-	long	num;
-	int		len;
+	int			len;
 
-	num = ft_abs(nb);
-	if (num == 0)
-		return (1);
-	len = 0;
-	while (num > 0)
-	{
-		num /= 10;
+	len = 1;
+	while ((nb /= 10) != 0)
 		++len;
-	}
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2019/12/18 16:04:57 by mberglun         ###   ########.fr       */
+/*   Updated: 2020/01/23 21:18:46 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct		s_fdlist
 }					t_fdlist;
 
 long				ft_abs(int nb);
-int					ft_intlen(int nb);
+int					ft_intlen(long long nb);
 char				*ft_strndup(const char *s1, size_t n);
 double				ft_pow(double n, int exp);
 int					ft_min(int a, int b);
