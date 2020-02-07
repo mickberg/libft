@@ -6,20 +6,16 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2020/02/07 11:29:08 by mikaelber        ###   ########.fr        #
+#    Updated: 2020/01/17 08:49:22 by mikaelber        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-
 SRC_DIR = ./srcs/
 OBJ_DIR = ./objs/
-INC_DIR = ./
-PRINTF_DIR = ./ft_printf/
-
-SRC_FILES = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_abs.c \
+SRCS = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_abs.c \
 	ft_intlen.c ft_itoa.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	ft_isprint.c ft_atoi.c ft_strcat.c ft_strncat.c ft_strstr.c ft_strnstr.c \
 	ft_strchr.c ft_strrchr.c ft_strlcat.c ft_strcpy.c ft_strncpy.c ft_strdup.c \
@@ -32,27 +28,22 @@ SRC_FILES = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_ab
 	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	ft_pow.c ft_strndup.c ft_min.c ft_max.c ft_sqrt.c \
 	get_next_line.c
-HDR_FILES = libft.h ft_printf.h
-
-INCS = $(addprefix $(INC_DIR), $(HDR_FILES));
-OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
+OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
 .PHONY: clean fclean re
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCS)
+$(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
-	@make -C $(PRINTF_DIR)
 
 $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
-	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_DIR)
+	@$(CC) $(CFLAGS) -c $< -o $@ -I ./
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@make -C $(PRINTF_DIR) clean
 
 fclean: clean
 	@rm -f $(NAME)

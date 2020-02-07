@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 17:01:31 by mberglun          #+#    #+#             */
-/*   Updated: 2020/02/07 11:30:21 by mikaelber        ###   ########.fr       */
+/*   Updated: 2020/01/23 21:18:46 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_LIBFT_H
 
 # include <stdlib.h>
-# include "./ft_printf.h"
 
 # define BUFF_SIZE 9999
 
