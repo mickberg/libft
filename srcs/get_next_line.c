@@ -6,12 +6,12 @@
 /*   By: mikaelberglund <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 07:38:08 by mikaelber         #+#    #+#             */
-/*   Updated: 2019/12/10 17:30:14 by mberglun         ###   ########.fr       */
+/*   Updated: 2020/02/09 15:34:20 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+#include "gnl.h"
 
 static t_fdlist	*ft_findcache(t_fdlist **fd_cache, int fd)
 {

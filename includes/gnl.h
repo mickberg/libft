@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   gnl.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mikaelberglund <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/01 20:08:56 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/08 22:35:02 by mikaelber        ###   ########.fr       */
+/*   Created: 2020/02/09 15:33:26 by mikaelber         #+#    #+#             */
+/*   Updated: 2020/02/09 15:37:31 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
-{
-	char	*d;
+#ifndef FT_GNL_H
+# define FT_GNL_H
 
-	d = dst;
-	while (*src != '\0')
-		*d++ = *src++;
-	*d = '\0';
-	return (dst);
-}
+# include <unistd.h>
+
+typedef struct		s_fdlist
+{
+	char			*cache;
+	int				fd;
+	struct s_fdlist	*next;
+}					t_fdlist;
+
+#endif

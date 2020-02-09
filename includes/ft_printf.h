@@ -6,7 +6,7 @@
 /*   By: mikaelberglund <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 08:10:25 by mikaelber         #+#    #+#             */
-/*   Updated: 2020/02/06 16:10:06 by mberglun         ###   ########.fr       */
+/*   Updated: 2020/02/09 15:27:19 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 # define FT_PRINTF_H
 
 # include "ft_printf_types.h"
-# include "../libft/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
+int		ft_dprintf(int fd, const char *format, ...);
+int		ft_vdprintf(int fd, const char *format, va_list ap);
 int		ft_vprintf(const char *format, va_list ap);
 
 void	parse_format(const char *format, t_output *out, int *pos, va_list ap);

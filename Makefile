@@ -6,7 +6,7 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2020/02/07 20:40:16 by mikaelber        ###   ########.fr        #
+#    Updated: 2020/02/09 15:37:20 by mikaelber        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
+# DIRECTORIES
 SRC_DIR = ./srcs/
 OBJ_DIR = ./objs/
-INC_DIR = ./
-PRINTF_DIR = ./ft_printf/
+INC_DIR = ./includes/
 
+# LIBFT source files
 SRC_FILES = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_abs.c \
 	ft_intlen.c ft_itoa.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	ft_isprint.c ft_atoi.c ft_strcat.c ft_strncat.c ft_strstr.c ft_strnstr.c \
@@ -31,9 +32,44 @@ SRC_FILES = ft_strlen.c ft_toupper.c ft_tolower.c ft_strcmp.c ft_strncmp.c ft_ab
 	ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	ft_pow.c ft_strndup.c ft_min.c ft_max.c ft_sqrt.c \
-	get_next_line.c ft_strescape.c ft_strcc.c ft_isspecial.c
-HDR_FILES = libft.h ft_printf.h
+	ft_strescape.c ft_strcc.c ft_isspecial.c
+# LIBFT header files
+HDR_FILES = libft.h
 
+# GNL source files
+SRC_FILES += get_next_line.c
+# GNL header files
+HDR_FILES += gnl.h
+
+# FT_PRINTF source files
+SRC_FILES += \
+	ft_printf/ft_printf.c \
+	ft_printf/parse/parse.c \
+	ft_printf/parse/parse_flags.c \
+	ft_printf/parse/parse_width.c \
+	ft_printf/parse/parse_precision.c \
+	ft_printf/parse/parse_length.c \
+	ft_printf/parse/parse_specifier.c \
+	ft_printf/parse/parse_number.c \
+	ft_printf/formatters/format_router.c \
+	ft_printf/formatters/format_int.c \
+	ft_printf/formatters/format_uint.c \
+	ft_printf/formatters/format_hex.c \
+	ft_printf/formatters/format_ptr.c \
+	ft_printf/formatters/format_octal.c \
+	ft_printf/formatters/format_float.c \
+	ft_printf/formatters/format_char.c \
+	ft_printf/formatters/format_str.c \
+	ft_printf/formatters/format_perc.c \
+	ft_printf/formatters/format_bin.c \
+	ft_printf/formatters/format_width.c \
+	ft_printf/utils/number_arguments.c \
+	ft_printf/utils/number_utils.c \
+	ft_printf/utils/base_conversion.c
+# FT_PRINTF header files
+HDR_FILES += ft_printf.h ft_printf_types.h
+
+# add dir prefixes
 INCS = $(addprefix $(INC_DIR), $(HDR_FILES));
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
 
@@ -44,7 +80,6 @@ all: $(NAME)
 $(NAME): $(OBJS) $(INCS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
-	@make -C $(PRINTF_DIR)
 
 $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
@@ -52,7 +87,6 @@ $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@make -C $(PRINTF_DIR) clean
 
 fclean: clean
 	@rm -f $(NAME)
